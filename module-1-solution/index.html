@@ -6,25 +6,31 @@
     <link rel="stylesheet" href="styles/bootstrap.min.css">
     <style>
       .message { font-size: 1.3em; font-weight: bold; }
+
+      .filled #lunch-menu { border-color: green}
+      .filled .message {color: green}
+
+      .empty #lunch-menu { border-color: red}
+      .empty .message {color: red}
     </style>
   </head>
-<body>
-   <div class="container" ng-controller="lunchController">
+<body ng-controller="lunchController">
+   <div class="container" ng-class="controllerClass">
      <h1>Lunch Checker</h1>
 
-         <div class="form-group">
-           <!--Input field filtering empty items of lunch-->
-             <input id="lunch-menu" type="text"
-             placeholder="list comma separated dishes you usually have for lunch"
-             class="form-control"
-             ng-model="lunchItemsString">
-         </div>
-         <div class="form-group">
-             <button class="btn btn-default" ng-click="displayLunchStatus()">Check If Too Much</button>
-         </div>
-         <div class="form-group message">
-           {{lunchStatus}}
-         </div>
+     <div class="form-group">
+       <!--Input field filtering empty items of lunch-->
+         <input id="lunch-menu" type="text"
+         placeholder="list comma separated dishes you usually have for lunch"
+         class="form-control"
+         ng-model="lunchItemsString">
+     </div>
+     <div class="form-group">
+         <button class="btn btn-default" ng-click="displayLunchStatus()">Check If Too Much</button>
+     </div>
+     <div class="form-group message">
+       {{lunchStatus}}
+     </div>
    </div>
    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
    <script type="text/javascript" src="scripts/main.js"></script>
