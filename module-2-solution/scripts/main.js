@@ -3,7 +3,7 @@
 
   angular.module('ShoppingListApp', [])
     .controller('ToBuyController', ToBuyController)
-    .controller('BoughtController', BoughtController)
+    .controller('AlreadyBoughtController', AlreadyBoughtController)
     .service('ShoppingListService', ShoppingListService);
     ;
 
@@ -13,7 +13,7 @@
 
     toBuyList.items = ShoppingListService.getToBuyList();
 
-    toBuyList.moveItem = function (index) {
+    toBuyList.buyItem = function (index) {
       ShoppingListService.buyItem(index);
 
       if (toBuyList.items.length === 0) {
@@ -23,8 +23,8 @@
 
   };
 
-  BoughtController.$inject = ['ShoppingListService'];
-  function BoughtController(ShoppingListService) {
+  AlreadyBoughtController.$inject = ['ShoppingListService'];
+  function AlreadyBoughtController(ShoppingListService) {
     var boughtList = this;
 
     boughtList.items = ShoppingListService.getBoughtList();
