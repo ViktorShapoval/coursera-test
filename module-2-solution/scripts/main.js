@@ -5,7 +5,6 @@
     .controller('ToBuyController', ToBuyController)
     .controller('AlreadyBoughtController', AlreadyBoughtController)
     .service('ShoppingListService', ShoppingListService);
-    ;
 
   ToBuyController.$inject = ['ShoppingListService'];
   function ToBuyController(ShoppingListService) {
@@ -15,10 +14,6 @@
 
     toBuyList.buyItem = function (index) {
       ShoppingListService.buyItem(index);
-
-      if (toBuyList.items.length === 0) {
-        toBuyList.emptyMessage = 'Everything is bought!';
-      }
     };
 
   };
