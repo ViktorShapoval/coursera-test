@@ -17,7 +17,6 @@
       <button class="btn btn-primary" ng-click="searchCtrl.getFilteredMenuItems();">Narrow It Down For Me!</button>
     </div>
 
-    <!-- found-items should be implemented as a component -->
     <div class="results">
       <found-items items="searchCtrl.foundItems" on-remove="searchCtrl.removeItem(index)"></found-items>
       <span ng-if="searchCtrl.errorMessage">{{searchCtrl.errorMessage}}</span>
