@@ -29,7 +29,7 @@
       })
 
       .state('categories.item', {
-        url: '/category-items/{categoryShortName}',
+        url: '/category-info/{categoryShortName}',
         component: 'categoryInfo',
 
         resolve: {
