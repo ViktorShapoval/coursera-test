@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en" ng-app="RestrauntMenu">
+  <head>
+    <title>Welcome to our Restraunt</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <style>
+      h1,h2,h3 {
+        margin-top: 0;
+      }
+    </style>
+  </head>
+<body>
+   <div class="container">
+    <h1>Welcome to our Restraunt</h1>
+    <ui-view></ui-view>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js" charset="utf-8"></script>
+  <script src="//unpkg.com/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+  <script src="src/restrauntMenu/restrauntMenu.module.js" charset="utf-8"></script>
+
+  <script src="src/data/data.module.js" charset="utf-8"></script>
+  <script src="src/data/menuData.service.js" charset="utf-8"></script>
+
+  <script src="src/restrauntMenu/categories.component.js" charset="utf-8"></script>
+
+  <script src="src/restrauntMenu/categoryInfo.component.js" charset="utf-8"></script>
+
+  <script src="src/router.js" charset="utf-8"></script>
+</body>
+</html>

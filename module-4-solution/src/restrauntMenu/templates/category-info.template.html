@@ -1,0 +1,5 @@
+<h2>{{$ctrl.categoryInfo.category.name}}</h2>
+<p>{{$ctrl.categoryInfo.category.special_instructions}}</p>
+<ol>
+  <li ng-repeat="item in $ctrl.categoryInfo.menu_items">{{item.name}}</li>
+</ol>

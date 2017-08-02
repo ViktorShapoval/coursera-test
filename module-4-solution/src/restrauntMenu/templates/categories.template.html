@@ -1,0 +1,12 @@
+<div class="row">  
+  <div class="col-xs-12 col-sm-6">
+    <h3><a ui-sref="home">Back to home</a></h3>
+    <div ng-repeat="item in $ctrl.items">
+      <a ui-sref="categories.item({categoryShortName: item.short_name})">({{item.short_name}})</a>
+      {{item.name}}
+    </div>
+  </div>
+  <div class="col-xs-12 col-sm-6">
+    <ui-view></ui-view>
+  </div>
+</div>
